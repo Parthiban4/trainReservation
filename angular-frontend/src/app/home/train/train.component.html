@@ -1,0 +1,23 @@
+<h3 class="" style="text-align: center;"><b>Train Details</b></h3>
+
+<table class="table table-info table-hover table table-bordered">
+    <tr>
+        <td>TrainId</td>
+        <td>TrainName</td>
+        <td>TrainClass</td>
+        <td>Capacity</td>
+        <td>Date</td>
+        <td>Timing</td>
+    </tr>
+    <tr *ngFor="let t of train">
+        <td >{{t.trainid}}</td>
+        <td>{{t.trainname}}</td>
+        <td>{{classes}}</td>
+        <td>{{t.capacity}}</td>
+        <td>{{t.date}}</td>
+        <td>{{t.timing}}</td>
+        <td>
+            <button [routerLink]="['booking', t.trainid]" class="btn btn-primary" type="submit">Book</button>
+        </td>
+    </tr>
+</table>

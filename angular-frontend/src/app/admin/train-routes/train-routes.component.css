@@ -1,0 +1,8 @@
+.container{
+    border: 1px solid;
+    max-width: fit-content;
+}
+
+label{
+    font-weight: bold;
+}

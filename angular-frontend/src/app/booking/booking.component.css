@@ -1,0 +1,12 @@
+.container{
+    border: 1px solid;
+    max-width: fit-content;
+    text-align: center;
+}
+
+.train{
+    background-color: white;
+    width: 200px;
+    align-items: center;
+    font-weight: bold;
+}

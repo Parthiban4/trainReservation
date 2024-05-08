@@ -1,0 +1,19 @@
+<form class="container">
+    <div>
+        <h3 class="text-center"><b>Cancel Booking</b></h3>
+    </div>
+    <table class="table table-secondary">
+        <tr>
+            <td>
+                <label for="PNR">Enter PNR Number</label>
+                <input name="PNR" [(ngModel)]="pnr" [ngModelOptions]= "{standalone: true}" type="text" placeholder="Enter PNR Number">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <button type="reset" (click)="cancel()" class="btn-info" type="submit">Submit</button>
+            </td>
+        </tr>
+    </table>
+</form>        

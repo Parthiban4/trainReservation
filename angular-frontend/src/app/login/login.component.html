@@ -1,0 +1,50 @@
+<form class="vh-100 gradient-custom" (ngSubmit)="loginUser()" [formGroup]="contactForm">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card bg-info text-white" style="border-radius: 1rem;">
+          <div class="card-body p-5 text-center">
+
+            <div class="mb-md-5 mt-md-4 pb-5">
+
+              <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
+              <p class="text-white-50 mb-5">Please enter your login and password!</p> 
+
+              <div data-mdb-input-init class="form-outline form-white mb-4">
+                <label class="form-label" for="email">Email</label>
+                <input type="email" [(ngModel)]= "user.email" id="email" placeholder="Enter Email Address" class="form-control form-control-lg" required formControlName="email"/>
+                <span *ngIf="contactForm.get('email')?.invalid && (contactForm.get('email')?.dirty || contactForm.get('email')?.touched)">
+                  <small class="text-danger"
+                      *ngIf="contactForm.get('email')?.hasError('required')"
+                  >This field is required.</small>
+                  <small class="text-danger"
+                      *ngIf="contactForm.get('email')?.hasError('email')"
+                  >Please enter correct email address</small>
+                </span>
+              </div>
+
+              <div data-mdb-input-init class="form-outline form-white mb-4">
+                <label class="form-label" for="password">Password</label>
+                <input type="password" [(ngModel)]= "user.password" id="password" formControlName="password" placeholder="Enter Password" class="form-control form-control-lg" required/>
+                <span *ngIf="contactForm.get('password')?.invalid && (contactForm.get('password')?.dirty || contactForm.get('password')?.touched)">
+                  <small class="text-danger"
+                      *ngIf="contactForm.get('password')?.hasError('required')"
+                  >This field is required.</small>
+              </span>
+      
+              </div>
+
+              <button (click)="loginUser()" data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-light btn-lg px-5" type="reset">Login</button>
+            </div>
+
+            <div>
+              <p class="mb-0">Don't have an account? 
+                  <a routerLink="signup" class="text-white-50 fw-bold">Sign Up</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

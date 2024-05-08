@@ -1,0 +1,118 @@
+<section class="vh-100 bg-image">
+  <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+          <div class="card" style="border-radius: 15px;">
+            <div class="card-body p-5">
+              <h2 class="text-uppercase text-center mb-5">Create an account</h2>
+
+              <form (ngSubmit)="registerUser()" [formGroup]="contactForm">
+
+                <div data-mdb-input-init class="form-outline mb-4">
+                    <label class="form-label" for="userName">Your Name</label>
+                  <input type="text" [(ngModel)]="user.username" id="username" formControlName="username"  class="form-control form-control-lg" required/>
+                  <span *ngIf="contactForm.get('username')?.invalid && (contactForm.get('username')?.dirty || contactForm.get('username')?.touched)">
+                    <small class="text-danger"
+                        *ngIf="contactForm.get('username')?.hasError('required')"
+                    >This field is required.</small>
+                  </span>
+                </div>
+
+                <div data-mdb-input-init class="form-outline mb-4">
+                    <label class="form-label" for="email">Your Email</label>
+                  <input type="email" id="email" [(ngModel)]="user.email" formControlName="email" class="form-control form-control-lg" required/>
+                  <span *ngIf="contactForm.get('email')?.invalid && (contactForm.get('email')?.dirty || contactForm.get('email')?.touched)">
+                    <small class="text-danger"
+                        *ngIf="contactForm.get('email')?.hasError('required')"
+                    >This field is required.</small>
+                    <small class="text-danger"
+                        *ngIf="contactForm.get('email')?.hasError('email')"
+                    >Please enter correct email address</small>
+                  </span>
+                </div>
+
+                <div data-mdb-input-init class="form-outline mb-4">
+                    <label class="form-label" for="password">Password</label>
+                  <input type="password" id="password" [(ngModel)]="user.password" class="form-control form-control-lg" formControlName="password" required/>
+                  <span *ngIf="contactForm.get('password')?.invalid && (contactForm.get('password')?.dirty || contactForm.get('password')?.touched)">
+                    <small class="text-danger"
+                        *ngIf="contactForm.get('password')?.hasError('required')"
+                    >This field is required.</small>
+                </span>
+                </div>
+
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <label class="form-label" for="address">Address</label>
+                <input type="text" id="address" [(ngModel)]="user.address" formControlName="address" class="form-control form-control-lg" required/>
+                <span *ngIf="contactForm.get('address')?.invalid && (contactForm.get('address')?.dirty || contactForm.get('address')?.touched)">
+                  <small class="text-danger"
+                      *ngIf="contactForm.get('-address')?.hasError('required')"
+                  >This field is required.</small>
+                </span>
+              </div>
+
+              <div data-mdb-input-init class="form-outline mb-4">
+                <label class="form-label" for="birthdate">BirthDate</label>
+              <input type="date" id="birthdate" [(ngModel)]="user.birthdate" formControlName="birthDate" class="form-control form-control-lg" required/>
+              <span *ngIf="contactForm.get('birthDate')?.invalid && (contactForm.get('birthDate')?.dirty || contactForm.get('birthDate')?.touched)">
+                <small class="text-danger"
+                    *ngIf="contactForm.get('birthDate')?.hasError('required')"
+                >This field is required.</small>
+              </span>
+            </div>
+
+              <div data-mdb-input-init class="form-outline mb-4">
+                <label class="form-label" for="age">Age</label>
+              <input type="number" id="age" [(ngModel)]="user.age" formControlName="age" class="form-control form-control-lg" required/>
+              <span *ngIf="contactForm.get('age')?.invalid && (contactForm.get('age')?.dirty || contactForm.get('age')?.touched)">
+                <small class="text-danger"
+                    *ngIf="contactForm.get('age')?.hasError('required')"
+                >This field is required.</small>
+              </span>
+            </div>
+
+            <div data-mdb-input-init class="form-outline mb-4">
+              <label class="form-label" for="gender">Gender</label>
+            <input type="text" id="gender" [(ngModel)]="user.gender" formControlName="gender" class="form-control form-control-lg" required/>
+            <span *ngIf="contactForm.get('gender')?.invalid && (contactForm.get('gender')?.dirty || contactForm.get('gender')?.touched)">
+              <small class="text-danger"
+                  *ngIf="contactForm.get('gender')?.hasError('required')"
+              >This field is required.</small>
+            </span>
+          </div>
+
+          <div data-mdb-input-init class="form-outline mb-4">
+            <label class="form-label" for="mobileNo">Mobile Number</label>
+          <input type="number" id="mobileNo" [(ngModel)]="user.mobileno"  class="form-control form-control-lg" maxlength="10" formControlName="mobileNo" required/>
+          <span *ngIf="contactForm.get('mobileNo')?.invalid && (contactForm.get('mobileNo')?.dirty || contactForm.get('mobileNo')?.touched)">
+            <small class="text-danger"
+                *ngIf="contactForm.get('mobileNo')?.hasError('required')"
+            >This field is required.</small>
+          </span>
+        </div>
+
+
+                <div class="form-check d-flex justify-content-center mb-5">
+                  <input type="checkbox" id="box" />
+                  <label  style="margin-left: 10px;" class="form-check-label" for="box">
+                    I agree all statements in <a href="#!" class="text-body"><u>Terms of service</u></a>
+                  </label>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                  <button (click)="registerUser()" type="reset" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Register</button>
+                </div>
+
+                <p class="text-center text-muted mt-5 mb-0">Have already an account? <a routerLink="login"
+                    class="fw-bold text-body"><u>Login here</u></a></p>
+
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

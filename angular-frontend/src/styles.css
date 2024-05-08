@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    background-image: url("./assets/image/train-image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: #333;
+    color: #fff;
+}

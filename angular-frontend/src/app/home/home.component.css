@@ -1,0 +1,43 @@
+
+  
+  /* Style the header links */
+  .header a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+  }
+
+  .header-right {
+    float: right;
+  }
+  
+
+.trainLogo{
+    height: 100px;
+    width: 100px;
+}
+
+
+#availability-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+label{
+    display: block;
+}
+
+.container{
+    border: 1px solid;
+    max-width: fit-content;
+}
+
+label{
+    font-weight: bold;
+}

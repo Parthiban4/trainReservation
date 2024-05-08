@@ -1,0 +1,12 @@
+.container{
+    /* border: 1px solid; */
+    max-width: 400px;
+}
+
+label{
+    font-weight: bold;
+}
+
+.table{
+    text-align: center;
+}

@@ -1,0 +1,95 @@
+<h3 class="text-center text-danger mt-3"><b>Booking Details</b></h3>
+<button routerLink="" (click)="logout()" class="btn btn-dark float-right mr-5">Logout</button>
+<button class="btn btn-dark float-right mr-5" (click)="downloadFullPagePDF()" id="pdf">Download as PDF</button>
+<form class="container">
+    <table class="table table-primary mt-5">
+        <tr>
+            <td>
+                <label>PNR Number:</label>
+            </td>
+            <td>
+                <p>{{bookingResult.pnr}}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Passenger Id:</label>
+            </td>
+            <td>
+                <p>{{bookingResult.passenger.id}}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>No of Seats</label>
+            </td>
+            <td>
+                <p>{{bookingResult.seatsRequired}}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Seats Numbers</label>
+            </td>
+            <td>
+                <p>{{bookingResult.seatNumbers}}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Train Name</label>
+            </td>
+            <td>
+                <p>{{bookingResult.train.trainname}}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Date:</label>
+            </td>
+            <td>
+                <p>{{bookingResult.train.date}}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Time</label>
+            </td>
+            <td>
+                <p>{{bookingResult.train.timing}}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Train Class:</label>
+            </td>
+            <td>
+                <p>{{classes}}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>TrainId:</label>
+            </td>
+            <td>
+                <p>{{trainId}}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>From:</label>
+            </td>
+            <td>
+                <p>{{source}}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>To:</label>
+            </td>
+            <td>
+                <p>{{destination}}</p>
+            </td>
+        </tr>
+    </table>
+</form>    

@@ -1,0 +1,13 @@
+<h3 class="text-danger" style="text-align: center;"><b>Booking Details</b></h3>
+<table class="table table-info table-hover table table-bordered">
+    <tr>
+        <td>BookingId</td>
+        <td>PassengerId</td>
+        <td>TrainId</td>
+    </tr>
+    <tr *ngFor="let b of bookDetails">
+        <td>{{b.bookingId}}</td>
+        <td>{{b.passenger.id}}</td>
+        <td>{{b.train.trainid}}</td>
+    </tr>
+</table>

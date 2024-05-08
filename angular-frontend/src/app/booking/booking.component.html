@@ -1,0 +1,40 @@
+<h1 class="text-danger text-center">Booking Page</h1>
+<br>
+<br>
+
+<form class="container mt-5">
+    <table id="table" class="table table-hover">
+        <tr>
+            <h5 class="text-warning">Enter Number of Seats Required</h5>   
+        </tr>
+        <tr>
+            <input type="number" [(ngModel)]="booking.seatsRequired" [ngModelOptions]= "{standalone: true}" placeholder="Enter the Number">
+        </tr>
+        <br>
+        <tr>
+            <h5 class="text-warning">Passenger Id</h5>   
+        </tr>
+        <tr>
+            <p class="train ml-5">{{ pid }}</p>
+        </tr>
+        <br>
+        <tr>
+            <h5 class="text-warning">Price</h5> 
+        </tr>
+        <tr>
+            <p class="train ml-5">{{ price }}</p>
+        </tr>
+        <br>
+        <tr>
+            <h5 class="text-warning">Train Id</h5>   
+        </tr>
+        <tr>
+            <p class="train ml-5">{{ tid }}</p>
+        </tr>
+        <br>
+        <tr>
+            <button type="reset" routerLink="bookingResult" (click)="bookTicket()" type="submit">Book Now</button>
+        </tr>
+    </table>
+</form>  
+

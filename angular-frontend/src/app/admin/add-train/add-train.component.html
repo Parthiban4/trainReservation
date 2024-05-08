@@ -1,0 +1,87 @@
+<h3 class="" style="text-align: center;"><b>Train Details</b></h3>
+
+<table class="table table-info table-hover table table-bordered">
+    <tr>
+        <td>TrainId</td>
+        <td>TrainName</td>
+        <td>TrainClass</td>
+        <td>Capacity</td>
+        <td>Date</td>
+        <td>Timing</td>
+    </tr>
+    <tr *ngFor="let t of trains">
+        <td>{{t.trainid}}</td>
+        <td>{{t.trainname}}</td>
+        <td>{{t.trainclass}}</td>
+        <td>{{t.capacity}}</td>
+        <td>{{t.date}}</td>
+        <td>{{t.timing}}</td>
+    </tr>
+</table>
+<form class="container">
+
+    <table class="table table-hover">
+        <tr>
+            <td>
+                <label>TrainId</label>
+            </td>
+            <td>
+                <input type="number" [(ngModel)]="train.trainid" [ngModelOptions]= "{standalone: true}" placeholder="Enter TrainId">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>TrainName</label>
+            </td>
+            <td>
+                <input type="text" [(ngModel)]="train.trainname" [ngModelOptions]= "{standalone: true}" placeholder="Enter TrainName">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>TrainClass</label>
+            </td>
+            <td>
+                <input type="text" [(ngModel)]="train.trainclass" [ngModelOptions]= "{standalone: true}" placeholder="Enter TrainClass">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>Train Capacity</label>
+            </td>
+            <td>
+                <input type="number" [(ngModel)]="train.capacity" [ngModelOptions]= "{standalone: true}" placeholder="Enter Capacity">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>Date</label>
+            </td>
+            <td>
+                <input type="date" [(ngModel)]="train.date" [ngModelOptions]= "{standalone: true}" placeholder="Enter Date">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>Time</label>
+            </td>
+            <td>
+                <input type="time" [(ngModel)]="train.timing" [ngModelOptions]= "{standalone: true}" placeholder="Enter Time">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <button type="reset" (click)="addTrain()" class="btn-primary">Add</button>
+            </td>
+            <td>
+                <button type="reset" (click)="editTrain()" class="btn-info">Edit</button>
+                <button type="reset" style="margin-left: 20px;" (click)="deletetrain()" class="btn-danger">Delete</button>
+            </td>
+        </tr>
+    </table>
+</form>

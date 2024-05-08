@@ -1,0 +1,67 @@
+<h3 class="" style="text-align: center;"><b>Route Details</b></h3>
+
+<table class="table table-info table-hover table table-bordered">
+    <tr>
+        <td>RouteId</td>
+        <td>Source</td>
+        <td>Destination</td>
+        <td>TrainId</td>
+    </tr>
+    <tr *ngFor="let r of routeDetails">
+        <td>{{r.routeid}}</td>
+        <td>{{r.source}}</td>
+        <td>{{r.destination}}</td>
+        <td>{{r.train.trainid}}</td>
+    </tr>
+</table>
+
+<form class="container">
+
+    <table class="table table-hover">
+        <tr>
+            <td>
+                <label>RouteId</label>
+            </td>
+            <td>
+                <input type="number" [(ngModel)]="route.routeid" [ngModelOptions]= "{standalone: true}" placeholder="Enter RouteId">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>From</label>
+            </td>
+            <td>
+                <input type="text" [(ngModel)]="route.source"  [ngModelOptions]= "{standalone: true}" placeholder="Enter Source">
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                <label>To</label>
+            </td>
+            <td>
+                <input type="text" [(ngModel)]="route.destination" [ngModelOptions]= "{standalone: true}" placeholder="Enter Destination">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>TrainId</label>
+            </td>
+            <td>
+                <input type="number" [(ngModel)]="route.train.trainid" [ngModelOptions]= "{standalone: true}" placeholder="Enter TrainId">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <button type="reset" (click)="addroute()" class="btn-primary">Add</button>
+            </td>
+            <td>
+                <button type="reset" (click)="editroute()"  class="btn-info">Edit</button>
+                <button type="reset" (click)="deleteroute()" style="margin-left: 20px;" class="btn-danger">Delete</button>
+            </td>
+        </tr>
+    </table>
+</form>    
